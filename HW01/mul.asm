@@ -30,7 +30,7 @@ _start:
 
 ; Multiplies two long number
 ;    rsi -- address of argument #1 (long number)
-;    r10 -- address of argument #2 (long number)
+;    rdi -- address of argument #2 (long number)
 ;    rcx -- length of long numbers in qwords
 ; result:
 ;    result is written to r13
@@ -121,7 +121,7 @@ add_long_short:
 ;    rcx -- length of long number in qwords
 ; result:
 ;    product is written to r8
-mul_long_short:								; так, заработало (ОК!)
+mul_long_short:		
                 push            rax
                 push            rdi
                 push            rcx
